@@ -37,6 +37,10 @@ fetch('http://jsonplaceholder.typicode.com/posts')
           th.appendChild(text);
           row.appendChild(th);
         }
+        let th1 = document.createElement("th");
+        let text1 = document.createTextNode("view");
+        th1.appendChild(text1);
+        row.appendChild(th1);
       }
       
       function generateTable(table, data) {
@@ -47,8 +51,12 @@ fetch('http://jsonplaceholder.typicode.com/posts')
             let text = document.createTextNode(element[key]);
             cell.appendChild(text);
           }
-          let cell1 = row.insertCell();
-          let text1 = document.createElement("a");
+            let cell1 = row.insertCell();
+            let text1 = document.createElement("a");
+            text1.innerHTML=("view")
+            text1.className= ("btn btn-info")
+            text1.href="https://jsonplaceholder.typicode.com/posts/"+element.id
+            cell1.appendChild(text1);
         }
       }
       
