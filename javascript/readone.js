@@ -1,4 +1,8 @@
-fetch('http://jsonplaceholder.typicode.com/posts')
+function getOne(){
+
+    let ID = document.getElementById('ID').value;
+
+    fetch('http://jsonplaceholder.typicode.com/posts/'+ID)
     .then(
         //checks for error codes on fetching of data
         //if any error code is found, prints to console
@@ -75,3 +79,4 @@ fetch('http://jsonplaceholder.typicode.com/posts')
       for(const param of params){
         console.log(param);
       }
+    }
